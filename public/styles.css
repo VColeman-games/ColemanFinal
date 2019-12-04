@@ -1,0 +1,11 @@
+h1{
+    color: red;
+}
+div#day{
+    font: bold;
+
+}
+div#information{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

@@ -12,14 +12,16 @@ var Info;
 var Title;
 var Img;
 
-app.get("/", (req,res) => {
+app.get("/", function(req,res) {
 
     getData();
-    console.log(Info);
+
     res.render("index", {Day:Day, Info:Info,Title:Title, Img:Img});
 
 
 });
+
+
 function getData(){
 fetch('https://csuserversidewebdevfinal.herokuapp.com/')
 .then(data=>{
