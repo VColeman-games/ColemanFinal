@@ -20,7 +20,7 @@ app.get("/", function(req,res) {
     
     res.render("index", ({Day:WebDay, Info:WebInfo, Title:WebTitle, Img:WebImg}));
 
-;
+
 });
 
 
