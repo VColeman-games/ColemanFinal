@@ -7,10 +7,10 @@ var port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
-var Day;
-var Info;
-var Title;
-var Img;
+var Day = "";
+var Info = "";
+var Title = "";
+var Img = "";
 
 app.get("/", function(req,res) {
 
@@ -31,9 +31,9 @@ fetch('https://csuserversidewebdevfinal.herokuapp.com/')
     Title = data.title;
     Img = data.url;
 console.log(data.date);
-console.log(Day);
-});
 
+});
+console.log(Day);
 }
 
 
