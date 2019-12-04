@@ -30,9 +30,9 @@ fetch('https://csuserversidewebdevfinal.herokuapp.com/')
     Info = data.explanation;
     Title = data.title;
     Img = data.url;
-
+console.log(data.date);
 });
-console.log(res.date);
+
 }
 
 
