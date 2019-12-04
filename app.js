@@ -4,10 +4,10 @@ var express = require('express');
 var fetch = require('node-fetch');
 var app = express();
 var port = process.env.PORT || 3000;
-var Day = "";
-var Info = "";
-var Title = "";
-var Img = "";
+var WebDay = "";
+var WebInfo = "";
+var WebTitle = "";
+var WebImg = "";
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -17,10 +17,10 @@ app.use(express.static(__dirname + '/public'));
 app.get("/", function(req,res) {
 
     getData();
+    
+    res.render("index", ({Day:WebDay, Info:WebInfo, Title:WebTitle, Img:WebImg}));
 
-    res.render("index", {Day:Day, Info:Info,Title:Title, Img:Img});
-
-
+;
 });
 
 
@@ -28,15 +28,18 @@ function getData(){
 fetch('https://csuserversidewebdevfinal.herokuapp.com/')
 .then(res => res.json())
 .then(data=>{
-    Day = data.date;
-    Info = data.explanation;
-    Title = data.title;
-    Img = data.url;
+    WebDay = data.date;
+    WebInfo = data.explanation;
+    WebTitle = data.title;
+    WebImg = data.url;
 
+    console.log(WebDay);
+    console.log(WebInfo);
+    console.log(WebTitle);
+    console.log(WebImg);
 
-})
-console.log(Day);
-console.log(data.date);
+});
+
 }
 
 
