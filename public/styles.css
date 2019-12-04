@@ -2,7 +2,7 @@ h1{
     color: red;
 }
 div#day{
-    font: bold;
+    font-weight: bold;
 
 }
 div#information{
