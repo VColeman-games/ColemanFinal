@@ -24,7 +24,7 @@ app.get("/", function(req,res) {
 
 function getData(){
 fetch('https://csuserversidewebdevfinal.herokuapp.com/')
-.then(res => res.json())
+.then(req => req.json())
 .then(data=>{
     Day = data.date;
     Info = data.explanation;
