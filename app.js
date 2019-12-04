@@ -10,13 +10,13 @@ app.use(express.static(__dirname + '/public'));
 var Day;
 var Info;
 var Title;
-var Url;
+var Img;
 
 app.get("/", (req,res) => {
 
     getData();
-
-    res.render("index", {Day:Day, Info:Info,Title:Title, Url:Url});
+    console.log(Info);
+    res.render("index", {Day:Day, Info:Info,Title:Title, Img:Img});
 
 
 });
@@ -24,12 +24,16 @@ function getData(){
 fetch('https://csuserversidewebdevfinal.herokuapp.com/')
 .then(data=>{
     Day = data.date;
+    Info = data.explanation;
+    Title = data.title;
+    Img = data.url;
 
 });
 
-console.log(Day);
 
 }
+
+
 
 app.listen(port, function () {
 
