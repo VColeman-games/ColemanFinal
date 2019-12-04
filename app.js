@@ -16,7 +16,7 @@ app.get("/", (req,res) => {
 
     getData();
 
-    res.render("index", {date:date, info:info,title:title, url:url});
+    res.render("index", {Date:Date, info:info,title:title, url:url});
 
 
 });
@@ -25,7 +25,7 @@ fetch('https://csuserversidewebdevfinal.herokuapp.com/')
 .then()
 .then(data=>{
     Date = data.date;
-})
+});
 
 console.log(Date);
 
