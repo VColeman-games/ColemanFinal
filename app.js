@@ -32,10 +32,7 @@ fetch('https://csuserversidewebdevfinal.herokuapp.com/')
     Img = data.url;
 
 });
-console.log(Day);
-console.log(Info);
-console.log(Title);
-console.log(Img);
+console.log(data.date);
 }
 
 
