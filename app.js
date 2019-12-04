@@ -33,7 +33,7 @@ fetch('https://csuserversidewebdevfinal.herokuapp.com/')
 console.log(data.date);
 
 });
-console.log(Day);
+
 }
 
 
