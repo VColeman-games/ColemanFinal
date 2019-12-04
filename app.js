@@ -33,7 +33,6 @@ fetch('https://csuserversidewebdevfinal.herokuapp.com/')
 
 });
 
-console.log(Info);
 }
 
 
